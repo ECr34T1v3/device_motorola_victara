@@ -175,10 +175,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.victara
 
-# LineageActions
+# MotoActions
+ifeq ($(filter ahannah rhannah,$(TARGET_DEVICE)),)
 PRODUCT_PACKAGES += \
-    LineageActions \
-    libjni_LineageActions
+    MotoActions
+endif
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
